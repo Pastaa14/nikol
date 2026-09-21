@@ -205,7 +205,7 @@ html, body {
   width: 100%;
 }
 
-input[type="password"] {
+.input-wrapper input {
   width: 100%;
   padding: 16px 20px;
   font-size: 1.05rem;
@@ -220,7 +220,7 @@ input[type="password"] {
   text-align: center;
 }
 
-input[type="password"]:focus {
+.input-wrapper input:focus {
   border-color: var(--color-golden-yellow);
   box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
   background: #ffffff;
