@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Freesia Nikol 🌼</title>
+  <!-- Google Fonts for Romantic & Cute Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Fredoka:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Floating Background Ambient Elements Canvas/Container -->
+  <div id="ambient-container" class="ambient-container" aria-hidden="true"></div>
+
+  <main class="app-card">
+
+    <!-- 1. LOGIN SCREEN -->
+    <section id="screen-login" class="screen active">
+      <div class="card-content">
+        <div class="flower-badge-header">
+          <span class="badge-flower floating">🌼</span>
+          <span class="badge-flower floating delay-1">✨</span>
+          <span class="badge-flower floating delay-2">🌼</span>
+        </div>
+        <h1 class="title">For Freesia Nikol 🌼</h1>
+        <p class="subtitle">I made a little something for you…</p>
+
+        <form id="login-form" onsubmit="event.preventDefault(); handleLogin();" class="login-form">
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="password-input"
+              placeholder="Enter the secret password…"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <p id="login-error" class="error-msg hidden">Hmm… that’s not it, baby. Try again. 💛</p>
+          <button type="submit" class="btn btn-primary">Enter 🌼</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 2. WELCOME SCREEN -->
+    <section id="screen-welcome" class="screen">
+      <div class="card-content">
+        <div class="animation-box welcome-anim">
+          <span class="pulse-flower">🌼</span>
+          <span class="pulse-heart">💛</span>
+        </div>
+        <h1 class="title">Welcome, Freesia Nichole Quilalang 🌼💛</h1>
+        <p class="creator-tag">Created by: Crush nimo ❤️</p>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 3. MESSAGE 1 -->
+    <section id="screen-msg-1" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="blooming-flower-container">
+            <div class="cute-flower-icon bouncing">🌼</div>
+          </div>
+        </div>
+        <h2 class="message-text">Hi Nikol kanang hi hehe</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 4. MESSAGE 2 -->
+    <section id="screen-msg-2" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="sweet-hearts-wrapper">
+            <span class="sweet-heart floating">💛</span>
+            <span class="sweet-flower floating delay-1">🌼</span>
+            <span class="sweet-heart floating delay-2">💛</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hi my Crush</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 5. MESSAGE 3 -->
+    <section id="screen-msg-3" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="blooming-freesia">
+            <div class="petal petal-1"></div>
+            <div class="petal petal-2"></div>
+            <div class="petal petal-3"></div>
+            <div class="petal petal-4"></div>
+            <div class="petal petal-5"></div>
+            <div class="center-core">🌼</div>
+          </div>
+        </div>
+        <h2 class="message-text">Hi Nicholas</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 6. MESSAGE 4 -->
+    <section id="screen-msg-4" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="matcha-theme-box">
+            <div class="matcha-cup">
+              <span class="steam s-1">💨</span>
+              <span class="steam s-2">💨</span>
+              <span class="matcha-icon">🍵</span>
+            </div>
+            <span class="flower-orbit">🌼</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hi my Matcha Lover</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 7. MESSAGE 5 -->
+    <section id="screen-msg-5" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="glowing-yellow-glow">
+            <span class="glow-heart pulse-slow">💛</span>
+            <span class="glow-sparkle sp-1">✨</span>
+            <span class="glow-sparkle sp-2">✨</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hi my yellow</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 8. MESSAGE 6 -->
+    <section id="screen-msg-6" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="dog-playful-box">
+            <span class="dog-icon wiggle">🐶</span>
+            <span class="paw-print p-1">🐾</span>
+            <span class="paw-print p-2">🐾</span>
+            <span class="yellow-accent">🌼</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hi my Dog whisperer</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 9. MESSAGE 7 -->
+    <section id="screen-msg-7" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="leader-crown-box">
+            <span class="crown-icon float-crown">👑</span>
+            <span class="star-sparkle st-1">⭐</span>
+            <span class="star-sparkle st-2">✨</span>
+            <span class="star-sparkle st-3">⭐</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hi my Leader</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 10. MESSAGE 8 -->
+    <section id="screen-msg-8" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="laughing-box shake-element">
+            <span class="laugh-emoji bounce">😂</span>
+            <span class="shaking-flower">🌼</span>
+            <span class="shaking-heart">💛</span>
+          </div>
+        </div>
+        <h2 class="message-text">Ge kapoy naka no? HAHAHAHAH</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 11. MESSAGE 9 -->
+    <section id="screen-msg-9" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="special-promise-box">
+            <span class="sparkle-orb">🔮</span>
+            <span class="magic-star m-1">✨</span>
+            <span class="magic-star m-2">🌟</span>
+            <span class="magic-star m-3">✨</span>
+          </div>
+        </div>
+        <h2 class="message-text">Last nani Promised</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 12. MESSAGE 10 -->
+    <section id="screen-msg-10" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="music-box">
+            <span class="mic-icon">🎤</span>
+            <span class="music-note n-1">🎵</span>
+            <span class="music-note n-2">🎶</span>
+            <span class="music-note n-3">🎼</span>
+            <span class="yellow-flower-note">🌼</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hi my singer My vocalist</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 13. MESSAGE 11 -->
+    <section id="screen-msg-11" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="funny-box rotate-dance">
+            <span class="funny-emoji">😜</span>
+            <span class="funny-flower">🌼</span>
+            <span class="funny-emoji-2">🤪</span>
+          </div>
+        </div>
+        <h2 class="message-text">Last na gud ni AHAHAHAHH</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 14. MESSAGE 12 -->
+    <section id="screen-msg-12" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <div class="blushing-box">
+            <span class="shy-emoji blushing">🙈</span>
+            <span class="blush-heart b-1">🌸</span>
+            <span class="blush-heart b-2">💕</span>
+            <span class="blush-flower">🌼</span>
+          </div>
+        </div>
+        <h2 class="message-text">Hala Ulawa oi na abot naka diri hehe</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 15. MESSAGE 13 -->
+    <section id="screen-msg-13" class="screen">
+      <div class="card-content">
+        <div class="animation-box romantic-grand">
+          <div class="big-glowing-heart-wrapper">
+            <span class="grand-heart pulse-intense">💛</span>
+            <span class="grand-flower gf-1">🌼</span>
+            <span class="grand-flower gf-2">🌼</span>
+            <span class="grand-sparkle">✨</span>
+          </div>
+        </div>
+        <h2 class="message-text romantic-title">I love you Crush 💛</h2>
+        <button class="btn btn-primary" onclick="nextScreen()">Next →</button>
+      </div>
+    </section>
+
+    <!-- 16. TRAP PAGE -->
+    <section id="screen-trap" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <span class="trap-emoji bounce">😭</span>
+          <span class="trap-flower">🌼</span>
+        </div>
+        <h2 class="message-text">Trap ni 😭 Ayaw og sulod</h2>
+        <div class="trap-btn-group">
+          <button id="trap-yes-btn" class="btn btn-primary btn-trap-yes" onclick="handleTrapYes()">YES 💛</button>
+          <button id="trap-no-btn" class="btn btn-secondary btn-trap-no" onclick="handleTrapNo()">NO 🥺</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. 5-SECOND YELLOW FLOWER ANIMATION SCREEN -->
+    <section id="screen-flower-anim" class="screen">
+      <div id="full-flower-canvas" class="full-flower-canvas">
+        <div class="flower-curtain-center">
+          <h2 class="blooming-text">🌼 Blooming for you... 💛</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18. FIND THE BUTTON SCREEN -->
+    <section id="screen-find-button" class="screen">
+      <div class="card-content find-card">
+        <h2 class="message-text">Find the button… 👀🌼</h2>
+        <div id="hidden-button-field" class="hidden-button-field">
+          <!-- Populated by JS with flowers and the hidden button -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 19. FINAL QUESTION SCREEN -->
+    <section id="screen-final-question" class="screen">
+      <div class="card-content">
+        <div class="animation-box">
+          <span class="question-flower floating">🌼</span>
+          <span class="question-heart pulse-slow">💛</span>
+        </div>
+        <h2 class="message-text question-text">Will you be my girlfriend? 💛</h2>
+        <div class="final-btn-group">
+          <button id="final-yes-btn" class="btn btn-primary btn-final-yes" onclick="handleFinalYes()">YES 🌼</button>
+          <button id="final-no-btn" class="btn btn-secondary btn-final-no" onclick="handleFinalNo()">NO 🥺</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20. FINAL YES CELEBRATION & POEM SCREEN -->
+    <section id="screen-celebration" class="screen">
+      <div class="card-content poem-card">
+        <div class="celebration-header">
+          <h1 class="celebration-title">You said YES! 🌼💛</h1>
+        </div>
+        <div class="letter-paper">
+          <h2 class="poem-title">For You, Freesia 🌼</h2>
+          <div id="poem-content" class="poem-content">
+            <p class="poem-line">Among all the flowers in the garden,</p>
+            <p class="poem-line">somehow, you're the one I see.</p>
+            <p class="poem-line">A little brighter, a little warmer,</p>
+            <p class="poem-line">and somehow, you mean so much to me.</p>
+            <br />
+            <p class="poem-line">I don't know where this road will take us,</p>
+            <p class="poem-line">or what tomorrow has in store,</p>
+            <p class="poem-line">but if I get to walk beside you,</p>
+            <p class="poem-line">I'll always ask for nothing more.</p>
+            <br />
+            <p class="poem-line">So here's my little promise,</p>
+            <p class="poem-line">simple, honest, and true:</p>
+            <p class="poem-line">I'll keep finding little ways</p>
+            <p class="poem-line">to make you smile when you're blue.</p>
+            <br />
+            <p class="poem-line">And if this moment is our beginning,</p>
+            <p class="poem-line">I'll remember it forever too.</p>
+            <p class="poem-line">Because out of everyone in this world,</p>
+            <p class="poem-line">I'm just really happy it was you. 💛</p>
+            <br />
+            <p class="poem-line final-thank-you">Thank you for saying yes. 🌼</p>
+            <p class="poem-signature">— Crush nimo ❤️</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
