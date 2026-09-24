@@ -66,6 +66,11 @@ function showScreen(screenId) {
     targetScreen.classList.add("active");
   }
 
+  const appCard = document.querySelector(".app-card");
+  if (appCard) {
+    appCard.scrollTop = 0;
+  }
+
   // Handle screen specific trigger events
   if (screenId === "screen-flower-anim") {
     start5SecondFlowerAnimation();
